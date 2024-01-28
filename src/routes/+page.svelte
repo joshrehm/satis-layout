@@ -1,15 +1,37 @@
 <script lang="ts">
-    import RenderSurface from '$lib/RenderSurface.svelte';
-    import Grid from '$lib/Grid.svelte';
-    import type Konva from 'konva';
+    import Designer from "$lib/Designer/Designer.svelte";
+    import Toolbar from "$lib/Gui/Toolbar.svelte";
 
-    let stage: Konva.Stage | null = null;
-    function handleStageReady(s: Konva.Stage) {
-        stage = s;
-    }
+    let designer : Designer;
+
 </script>
 
-<RenderSurface onStageReady={handleStageReady} />
-{#if stage}
-    <Grid {stage} />
-{/if}
+<div id="gui">
+    <header>
+        <h1>Designer</h1>
+    </header>
+    <Designer bind:this={designer} class="designer">
+    {#if designer}
+        <Toolbar designer={designer} />
+    {/if}
+    </Designer>
+    <footer>
+        &copy; 2024 Joshua Rehm
+    </footer>
+</div>
+
+<style>
+    :global(.designer) {
+        flex: 1;
+        position: relative;
+
+        border: 1px solid black;
+        margin: 0px 16px 0px 16px;
+    }
+
+    #gui {
+        display: flex;
+        flex-direction:column;
+        height: 100%;
+    }
+</style>
