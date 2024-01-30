@@ -7,6 +7,8 @@ belts, mergers, and splitters.
 
 Required functionality:
 
+ * [X] Foundation grid
+ * [X] Panning/zooming
  * [ ] Snap-to-grid
  * [ ] Belts/Pipes
  * [ ] Building info (size, image, connection points)
@@ -14,8 +16,7 @@ Required functionality:
  * [ ] Copy/Paste
  * [ ] Export/Import
  * [X] Multi-select
- * [X] Foundation grid
- * [X] Panning/zooming
+ * [ ] Drag to select
 
 Nice to have (In no particular order):
 
@@ -23,8 +24,17 @@ Nice to have (In no particular order):
  * [ ] Floors
  * [ ] Power Lines/Poles
  * [ ] Recipe selection
- * [ ] Input/Output Rates (+Overclocking)
+ * [ ] Display Input/Output Rates (+Overclocking)
  * [ ] Power calculation
+
+
+# Controls
+
+ * Pan with the right mouse button
+ * Zoom with the mouse wheel
+ * Buildings can be selected with left click. Multiple buildings can be selected
+   by holding CTRL. To deselect buildings, click a blank area on the grid.
+ 
 
 ## Known Issues
 
@@ -44,6 +54,7 @@ To start a development server:
 ```bash
 npm run dev
 ```
+
 
 ## Build
 
