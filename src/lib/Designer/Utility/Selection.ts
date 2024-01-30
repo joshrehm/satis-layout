@@ -1,13 +1,13 @@
 import Konva from 'konva';
-import type FactoryBuilding from './FactoryBuilding';
-import type { Vector2d } from 'konva/lib/types';
 
 class Selection {
-    private readonly group = new Konva.Group({ x: 0, y: 0, draggable: true });
     private readonly dragLayer = new Konva.Layer();
+    private readonly group = new Konva.Group({ x: 0, y: 0, draggable: true });
 
     private readonly stage: Konva.Stage;
     private readonly factoryLayer: Konva.Layer;
+
+    // TODO: Add on drag event
 
     constructor(stage: Konva.Stage, factoryLayer: Konva.Layer) {
         this.factoryLayer = factoryLayer;

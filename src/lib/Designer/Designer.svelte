@@ -11,6 +11,8 @@
     let grid : DesignerGrid;
     let floor : FactoryFloor;
 
+    // TODO: Subscribe to selection on drag event (through FactoryFloor)
+
     Konva.pixelRatio = 1;
     Konva.dragButtons = [ 0, 2 ];
 

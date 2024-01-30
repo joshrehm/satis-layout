@@ -9,6 +9,8 @@ class FactoryFloor {
     private readonly stage: Konva.Stage;
     private readonly selection: Selection;
 
+    // TODO: Subscribe to selection drag event. Implement snap to grid there.
+
     constructor(stage: Konva.Stage) {
         this.stage = stage;
         this.stage.on('click', (e) => this.onStageClick(e));
