@@ -1,33 +1,64 @@
-# create-svelte
+# Satisfactory Factory Layout Planner
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This planner is for laying out factories. You can position factory buildings,
+belts, mergers, and splitters.
 
-## Creating a project
+## TODO
 
-If you're seeing this, you've probably already done this step. Congrats!
+Required functionality:
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+ * [X] Foundation grid
+ * [X] Panning/zooming
+ * [ ] Snap-to-grid
+ * [ ] Belts/Pipes
+ * [ ] Building info (size, image, connection points)
+ * [ ] Labels
+ * [ ] Copy/Paste
+ * [ ] Export/Import
+ * [X] Multi-select
+ * [ ] Drag to select
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Nice to have (In no particular order):
 
-## Developing
+ * [ ] Blueprints
+ * [ ] Floors
+ * [ ] Power Lines/Poles
+ * [ ] Recipe selection
+ * [ ] Display Input/Output Rates (+Overclocking)
+ * [ ] Power calculation
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+# Controls
+
+ * Pan with the right mouse button
+ * Zoom with the mouse wheel
+ * Buildings can be selected with left click. Multiple buildings can be selected
+   by holding CTRL. To deselect buildings, click a blank area on the grid.
+ 
+
+## Known Issues
+
+ * Responsiveness can be laggy in Firefox. Edge and Chrome do not exhibit this behavior.
+   However, I could not find any related bug reports for Firefox. See:<br/>
+   https://github.com/konvajs/konva/issues/801<br/>
+   https://github.com/konvajs/konva/issues/293<br/>
+
+
+## Development
+
+This project is implemented with svelte kit. To get the project running, 
+clone the repo and install dependencies with `npm install`.
+
+To start a development server:
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
 
-To create a production version of your app:
+## Build
+
+To create a production build:
 
 ```bash
 npm run build
@@ -35,4 +66,5 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) 
+> for your target environment.
