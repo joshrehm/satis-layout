@@ -15,7 +15,7 @@ Required functionality:
  * [ ] Labels
  * [ ] Copy/Paste
  * [ ] Export/Import
- * [X] Multi-select
+ * [ ] Multi-select
  * [ ] Drag to select
 
 Nice to have (In no particular order):
