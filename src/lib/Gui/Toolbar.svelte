@@ -6,7 +6,7 @@
     export let designer : Designer;
 
     onMount(() => {
-        designer.addBuilding();
+        //designer.addBuilding();
     });
 
     function addBuilding() {
